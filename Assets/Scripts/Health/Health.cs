@@ -37,7 +37,7 @@ namespace ClearSky
         public void Die()
         {
             playerController.Die();
-            
+            currentHealth = maxHealth;
         }
     }
 }
