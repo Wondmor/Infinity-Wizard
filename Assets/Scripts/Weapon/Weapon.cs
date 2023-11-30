@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ClearSky
-{
     public class Weapon : MonoBehaviour
 {
     
@@ -21,5 +19,4 @@ namespace ClearSky
             return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
     }
     
-}
 }
