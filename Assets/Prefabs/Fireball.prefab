@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6426237670434986373}
   - component: {fileID: 1522096577242898257}
   - component: {fileID: 7478045819882401776}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506577251678725357}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.16431071, w: 0.98640865}
-  m_LocalPosition: {x: 0, y: 2.18, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.106072254, w: 0.9943585}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.178}
 --- !u!212 &1238004559179825554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   range: 10
+  owner: {fileID: 0}
 --- !u!50 &1522096577242898257
 Rigidbody2D:
   serializedVersion: 4
@@ -160,6 +161,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.37950224}
-  m_Size: {x: 0.38, y: 1.08}
+  m_Offset: {x: -0.0044418215, y: 0.00065361283}
+  m_Size: {x: 0.21990973, y: 0.32230443}
   m_Direction: 0

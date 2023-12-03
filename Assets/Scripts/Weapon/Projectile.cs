@@ -10,8 +10,9 @@ public class Projectile : MonoBehaviour
     public float speed = 10f; // 子弹速度
     public float range = 10f;
 
+    public GameObject owner;
     private float _flyTime;
-
+    
     private void OnEnable()
     {
         _flyTime = Time.time;
@@ -24,16 +25,21 @@ public class Projectile : MonoBehaviour
 
         if (Time.time - _flyTime > range / speed)
         {
-            ObjectPool.Instance.PushObject(gameObject);
             _flyTime = Time.time;
+            ObjectPool.Instance.PushObject(gameObject);
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        // 子弹碰撞到其他物体时的处理
-        // 例如销毁子弹或造成伤害等
-        ObjectPool.Instance.PushObject(gameObject);
+        
+        if (other.CompareTag("Enemy"))
+        {   
+            other.GetComponent<Enemy>().ChangeHealth(owner.GetComponent<Weapon>().attackDamage);
+            ObjectPool.Instance.PushObject(gameObject);
+        }
+        
+        
     }
     
     

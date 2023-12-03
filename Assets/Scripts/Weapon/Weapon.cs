@@ -54,11 +54,13 @@ public class Weapon : MonoBehaviour
         GameObject bullet = ObjectPool.Instance.GetObject(bulletPrefab);
         bullet.transform.position = shootPoint.position;
         bullet.transform.rotation = shootPoint.rotation;
+        
         //ObjectPool.Instance.PushObject(bulletPrefab);
         
 
         // 设置子弹的速度
         bullet.GetComponent<Projectile>().speed = projectileSpeed;
         bullet.GetComponent<Projectile>().range = projectileRange;
+        bullet.GetComponent<Projectile>().owner = GameObject.FindWithTag("Player");
     }
 }
