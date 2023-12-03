@@ -53,3 +53,9 @@ TagManager:
   - name: Layer 3
     uniqueID: 4189426099
     locked: 0
+  - name: Wall
+    uniqueID: 1253099805
+    locked: 0
+  - name: Floor
+    uniqueID: 3653178197
+    locked: 0
