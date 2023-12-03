@@ -9,10 +9,15 @@ public class Enemy : MonoBehaviour
     public float maxHealth;
 
     private float _currentHealth;
-
     private void OnEnable()
     {
         _currentHealth = maxHealth;
+        
+    }
+
+    private void Update()
+    {
+
     }
 
     public void ChangeHealth(float damage)
@@ -26,4 +31,6 @@ public class Enemy : MonoBehaviour
     {
         ObjectPool.Instance.PushObject(gameObject);
     }
+
+
 }
