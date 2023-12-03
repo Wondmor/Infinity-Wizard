@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
-
 namespace ClearSky
 {
     public class SimplePlayerController : MonoBehaviour
     {
         public float movePower = 10f;
-
         private Rigidbody2D rb;
         private Animator anim;
         private int direction = 1;
@@ -16,6 +14,7 @@ namespace ClearSky
         {
             rb = GetComponent<Rigidbody2D>();
             anim = GetComponent<Animator>();
+
         }
 
         private void Update()
@@ -66,17 +65,17 @@ namespace ClearSky
 
         public void Hurt()
         {
-                anim.SetTrigger("hurt");
-                if (direction == 1)
-                    rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
-                else
-                    rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
+            anim.SetTrigger("hurt");
+            if (direction == 1)
+                rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
+            else
+                rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
         }
 
         public void Die()
         {
-                anim.SetTrigger("die");
-                alive = false;
+            anim.SetTrigger("die");
+            alive = false;
         }
 
         void Restart()
