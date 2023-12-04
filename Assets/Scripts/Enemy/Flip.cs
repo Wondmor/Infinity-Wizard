@@ -6,10 +6,12 @@ using UnityEngine;
 public class Flip : MonoBehaviour
 {
 
-
+    public float scale;
+    
     void OnEnable()
     {
         StartCoroutine(FlipCharacter());
+        scale = gameObject.transform.localScale.x;
     }
 
 
@@ -27,22 +29,22 @@ public class Flip : MonoBehaviour
                 GameObject player = GameObject.FindWithTag("Player");
                 if (currentPosition.x > player.transform.position.x)
                 {
-                    FlipSprite(2);
+                    FlipSprite(scale);
                 }
                 else
                 {
-                    FlipSprite(-2);
+                    FlipSprite(-scale);
                 }
             }
             else
             {
                 if (currentPosition.x >= previousPosition.x)
                 {
-                    FlipSprite(-2);
+                    FlipSprite(-scale);
                 }
                 else
                 {
-                    FlipSprite(2);
+                    FlipSprite(scale);
                 }
             }
             

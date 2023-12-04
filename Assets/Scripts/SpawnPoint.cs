@@ -8,6 +8,7 @@ public class SpawnPoint : MonoBehaviour
     public GameObject prefabToSpawn;
     public float spawnTime;
     public int spawnNumber;
+    public float spawnRange;
 
     private float _lastSpawnTime;
 
@@ -15,7 +16,7 @@ public class SpawnPoint : MonoBehaviour
     {
         if (Time.time - _lastSpawnTime >= spawnTime && spawnNumber > 0)
         {
-            Vector3 randSpawnPosition = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0f);
+            Vector3 randSpawnPosition = new Vector3(Random.Range(-spawnRange, spawnRange), Random.Range(-spawnRange, spawnRange), 0f);
             randSpawnPosition += gameObject.transform.position;
             Spawn(prefabToSpawn, randSpawnPosition);
         }
