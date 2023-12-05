@@ -20,7 +20,7 @@ public class Melee : MonoBehaviour
         if (other.CompareTag("Player"))
         {   
             other.GetComponent<Health>().TakeDamage(owner.GetComponent<Enemy>().attack);
-            ObjectPool.Instance.PushObject(gameObject);
+            //ObjectPool.Instance.PushObject(gameObject);
         }
         
         

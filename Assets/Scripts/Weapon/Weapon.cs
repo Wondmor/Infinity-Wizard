@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public float attackSpeed;
     public float attackDamage;
     [Header("Projectile")]
-    public float projectileNumber;
+    public int projectileNumber;
     public float projectileAngle;
     public float projectileRange;
     public float projectileSpeed ;
@@ -51,16 +51,24 @@ public class Weapon : MonoBehaviour
 
     protected virtual void Fire()
     {
-        GameObject bullet = ObjectPool.Instance.GetObject(bulletPrefab);
-        bullet.transform.position = shootPoint.position;
-        bullet.transform.rotation = shootPoint.rotation;
-        
-        //ObjectPool.Instance.PushObject(bulletPrefab);
-        
+        int medium = projectileNumber / 2;
+        for (int i = 0; i < projectileNumber; i++)
+        {
+            GameObject bullet = ObjectPool.Instance.GetObject(bulletPrefab);
+            bullet.transform.position = shootPoint.position;
+            if (projectileNumber % 2 == 1)
+            {
+                bullet.transform.rotation = shootPoint.rotation * Quaternion.AngleAxis(projectileAngle * (i - medium), Vector3.forward);
+            }
+            else
+            {
+                bullet.transform.rotation = shootPoint.rotation * Quaternion.AngleAxis(projectileAngle * (i - medium) + projectileAngle/2, Vector3.forward);
+            }
+            
+            bullet.GetComponent<Projectile>().speed = projectileSpeed;
+            bullet.GetComponent<Projectile>().range = projectileRange;
+            bullet.GetComponent<Projectile>().owner = GameObject.FindWithTag("Player");
+        }
 
-        // 设置子弹的速度
-        bullet.GetComponent<Projectile>().speed = projectileSpeed;
-        bullet.GetComponent<Projectile>().range = projectileRange;
-        bullet.GetComponent<Projectile>().owner = GameObject.FindWithTag("Player");
     }
 }
