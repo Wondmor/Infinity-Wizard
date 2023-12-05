@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     public float _currentHealth;
     private Animator animatior;
-    private NavMeshAgent navMeshAgent;
+    protected NavMeshAgent navMeshAgent;
     private bool isAlive;
     private void OnEnable()
     {

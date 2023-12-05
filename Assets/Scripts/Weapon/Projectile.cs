@@ -33,9 +33,14 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && owner.CompareTag("Player"))
         {   
             other.GetComponent<Enemy>().ChangeHealth(owner.GetComponent<Weapon>().attackDamage);
+            ObjectPool.Instance.PushObject(gameObject);
+        }
+        else if (other.CompareTag("Player") && owner.CompareTag("Enemy"))
+        {
+            other.GetComponent<Health>().TakeDamage(owner.GetComponent<Weapon>().attackDamage);
             ObjectPool.Instance.PushObject(gameObject);
         }
         

@@ -614,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 6629528815989099309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.18, z: 0}
+  m_LocalPosition: {x: 0.86, y: 2.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -998,7 +998,7 @@ PrefabInstance:
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.72
+      value: 14.89
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
@@ -1480,6 +1480,9 @@ MonoBehaviour:
   lv1Text: {fileID: 1478815594328747603}
   expBarImage: {fileID: 4117945071370869008}
   levelUpPanel: {fileID: 5392888794690109449}
+  onLevelUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &948843749021131294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,12 +1498,12 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1506577251678725357, guid: 76e9683951c24ab4b8d7390643d1d812,
     type: 3}
   shootPoint: {fileID: 1565153397968256129}
-  attackSpeed: 2
+  attackSpeed: 1
   attackDamage: 1
-  projectileNumber: 2
-  projectileAngle: 0
+  projectileNumber: 1
+  projectileAngle: 10
   projectileRange: 10
-  projectileSpeed: 10
+  projectileSpeed: 5
 --- !u!4 &159559911951138167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
