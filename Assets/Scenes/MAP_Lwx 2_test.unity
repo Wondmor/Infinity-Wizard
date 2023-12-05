@@ -2659,11 +2659,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 5427192947668750614, guid: a24cfee7839d3de42a91a1356702dd42,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7457369382099717545, guid: a24cfee7839d3de42a91a1356702dd42,
         type: 3}
       propertyPath: weapon
