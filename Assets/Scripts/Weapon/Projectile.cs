@@ -40,7 +40,7 @@ public class Projectile : MonoBehaviour
         }
         else if (other.CompareTag("Player") && owner.CompareTag("Enemy"))
         {
-            other.GetComponent<Health>().TakeDamage(owner.GetComponent<Weapon>().attackDamage);
+            other.GetComponent<Health>().TakeDamage(owner.GetComponent<Enemy>().attack);
             ObjectPool.Instance.PushObject(gameObject);
         }
         

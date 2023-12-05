@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public float viewableRange;
     [Header("Component")] private Transform target;
     protected Animator animator;
-    private AIPath aiPath;
+    protected AIPath aiPath;
     private bool isAlive;
     private float _lastHit;
     private GameObject player;
