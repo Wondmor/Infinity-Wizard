@@ -27,10 +27,6 @@ public class SpawnPoint : MonoBehaviour
         GameObject newGameObject = ObjectPool.Instance.GetObject(spawnPrefab);
         newGameObject.transform.position = spawnPosition;
 
-        var behaviorTree = newGameObject.GetComponent<BehaviorTree>();
-        behaviorTree.SetVariableValue("Self", newGameObject);
-        behaviorTree.SetVariableValue("Home", gameObject);
-
         _lastSpawnTime = Time.time;
         spawnNumber--;
     }

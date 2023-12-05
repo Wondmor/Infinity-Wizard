@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private float _lastHit;
     private GameObject player;
     private Vector3 home;
+    private CapsuleCollider2D bodyCollider;
 
     private void OnEnable()
     {
@@ -68,6 +69,8 @@ public class Enemy : MonoBehaviour
         isAlive = false;
         aiPath.maxSpeed = 0f;
         animator.Play("die");
+        bodyCollider = GetComponent<CapsuleCollider2D>();
+        bodyCollider.enabled = false;
         yield return new WaitForSeconds(1f);
         ObjectPool.Instance.PushObject(gameObject);
     }
