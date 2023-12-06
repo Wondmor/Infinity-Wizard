@@ -1,7 +1,5 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using Pathfinding.Util;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObjectPool
@@ -17,12 +15,9 @@ public class ObjectPool
             {
                 instance = new ObjectPool();
             }
-
             return instance;
         }
     }
-
-
     public GameObject GetObject(GameObject prefab)
     {
         GameObject _object;
@@ -31,16 +26,14 @@ public class ObjectPool
             _object = GameObject.Instantiate(prefab);
             PushObject(_object);
             if (pool == null)
-            {
                 pool = new GameObject("ObjectPool");
-            }
-            GameObject child = GameObject.Find(prefab.name);
-            if (!child)
+            GameObject childPool = GameObject.Find(prefab.name + "Pool");
+            if (!childPool)
             {
-                child = new GameObject(prefab.name);
-                child.transform.SetParent(pool.transform);
+                childPool = new GameObject(prefab.name + "Pool");
+                childPool.transform.SetParent(pool.transform);
             }
-            _object.transform.SetParent(child.transform);
+            _object.transform.SetParent(childPool.transform);
         }
         _object = objectPool[prefab.name].Dequeue();
         _object.SetActive(true);
@@ -51,9 +44,7 @@ public class ObjectPool
     {
         string _name = prefab.name.Replace("(Clone)", string.Empty);
         if (!objectPool.ContainsKey(_name))
-        {
             objectPool.Add(_name, new Queue<GameObject>());
-        }
         objectPool[_name].Enqueue(prefab);
         prefab.SetActive(false);
     }

@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6640539293209354515
 Transform:
   m_ObjectHideFlags: 0
@@ -47,5 +47,5 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 1000011742669328, guid: 315058484cf2044ce8dcb608b4678ff6,
     type: 3}
   spawnTime: 1
-  spawnNumber: 1
+  spawnNumber: 5
   spawnRange: 1

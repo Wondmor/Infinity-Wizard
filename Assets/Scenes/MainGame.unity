@@ -395,7 +395,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 545781853}
     - target: {fileID: 7151633522109852201, guid: 216f1d62ffb9af74a812739893948aa1,
         type: 3}
       propertyPath: m_Priority
@@ -424,8 +424,62 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8538980508867408517, guid: 216f1d62ffb9af74a812739893948aa1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 72216931}
   m_SourcePrefab: {fileID: 100100000, guid: 216f1d62ffb9af74a812739893948aa1, type: 3}
+--- !u!1 &72216926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8538980508867408517, guid: 216f1d62ffb9af74a812739893948aa1,
+    type: 3}
+  m_PrefabInstance: {fileID: 58249791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &72216931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72216926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &204579919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -793,6 +847,36 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3fc5931ce4b6c54380010b18f9d25c8, type: 3}
+--- !u!114 &545781844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 948843749021131294, guid: 584f3efeb939f534c9c07adf55a67fc2,
+    type: 3}
+  m_PrefabInstance: {fileID: 38246789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbecae51bb445d4ca81f883f0d84a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &545781845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6777874547671262306, guid: 584f3efeb939f534c9c07adf55a67fc2,
+    type: 3}
+  m_PrefabInstance: {fileID: 38246789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe873d428b4c1a47b46667433fed2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &545781853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 159559911951138167, guid: 584f3efeb939f534c9c07adf55a67fc2,
+    type: 3}
+  m_PrefabInstance: {fileID: 38246789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561420279 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013034572668, guid: 389c7e1a1dabb4e1e917001420b89c9a,
@@ -1589,12 +1673,12 @@ PrefabInstance:
         type: 3}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 545781844}
     - target: {fileID: 7457369382099717545, guid: a24cfee7839d3de42a91a1356702dd42,
         type: 3}
       propertyPath: levelUpStats
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 545781845}
     - target: {fileID: 8094792754099925113, guid: a24cfee7839d3de42a91a1356702dd42,
         type: 3}
       propertyPath: m_LocalRotation.x

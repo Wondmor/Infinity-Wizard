@@ -71,6 +71,7 @@ public class Enemy : MonoBehaviour
         animator.Play("die");
         bodyCollider = GetComponent<CapsuleCollider2D>();
         bodyCollider.enabled = false;
+        aiPath.enabled = false;
         yield return new WaitForSeconds(1f);
         ObjectPool.Instance.PushObject(gameObject);
     }

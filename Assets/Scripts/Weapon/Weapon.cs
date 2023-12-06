@@ -29,7 +29,6 @@ public class Weapon : MonoBehaviour
         // 在按下空格键时发射子弹
         if (Input.GetMouseButtonDown(0))
         {
-            
             isShooting = true;
         }
         if (Input.GetMouseButtonUp(0))
