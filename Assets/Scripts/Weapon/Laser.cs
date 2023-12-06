@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Pathfinding.Util;
 using UnityEngine;
-using Object = UnityEngine.Object;
+
 
 public class Laser : Weapon
 {
@@ -45,8 +41,16 @@ public class Laser : Weapon
     protected override void Fire()
     {
         RaycastHit2D hit2D = Physics2D.Raycast(shootPoint.position, direction, projectileRange);
-        laser.SetPosition(0, shootPoint.position);
-        laser.SetPosition(1, hit2D.point);
-        //Debug.DrawLine(shootPoint.position,hit2D.point);
+        if (hit2D.collider == null)
+        {
+            laser.SetPosition(0, shootPoint.position);
+            laser.SetPosition(1, (Vector2)shootPoint.position + direction * projectileRange);
+        }
+        else
+        {
+            // 如果命中了物体，设置第二个端点的位置为命中点
+            laser.SetPosition(0, shootPoint.position);
+            laser.SetPosition(1, hit2D.point);
+        }
     }
 }
