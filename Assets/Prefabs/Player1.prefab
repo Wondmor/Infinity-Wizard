@@ -963,7 +963,7 @@ PrefabInstance:
     - target: {fileID: 4105362945620786469, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786469, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
@@ -993,12 +993,12 @@ PrefabInstance:
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.23
+      value: -71.165
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.89
+      value: 53.73
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
@@ -1498,9 +1498,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1506577251678725357, guid: 76e9683951c24ab4b8d7390643d1d812,
     type: 3}
   shootPoint: {fileID: 1565153397968256129}
-  attackSpeed: 1
+  attackSpeed: 2
   attackDamage: 1
-  projectileNumber: 1
+  projectileNumber: 3
   projectileAngle: 10
   projectileRange: 10
   projectileSpeed: 5
