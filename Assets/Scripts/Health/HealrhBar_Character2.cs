@@ -9,22 +9,17 @@ namespace ClearSky
     public class HealrhBar_Character2 : MonoBehaviour
     {
         public Slider slider;
-        public Transform followTransform;
+        
 
-        private void Start()
+        public void setMaxHealth(int health)
         {
-
+            slider.maxValue = health;
+            slider.value = health;
         }
 
-        private void Update()
+        public void setHealth(int health)
         {
-            slider.maxValue = Health_Character2.maxHealth;
-            slider.value = Health_Character2.currentHealth;
-
-            // Update the position of the health bar to follow the character
-            Vector3 targetPosition = Camera.main.WorldToScreenPoint(followTransform.position);
-            transform.position = targetPosition;
-
+            slider.value = health;
         }
     }
 }

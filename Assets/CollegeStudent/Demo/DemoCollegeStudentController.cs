@@ -96,14 +96,14 @@ namespace ClearSky
             }
         }
 
-        public void Hurt()
+        /*public void Hurt()
         {
                 anim.SetTrigger("hurt");
                 if (direction == 1)
                     rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
                 else
                     rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
-        }
+        }*/
 
         public void Die()
         {
