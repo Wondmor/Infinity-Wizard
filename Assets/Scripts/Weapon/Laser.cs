@@ -10,7 +10,7 @@ public class Laser : Weapon
     private LineRenderer laser;
     private bool isShooting;
     private Vector2 direction;
-    private Vector2 mouseWorldPosition;
+    private Vector2 mousePos;
     public Camera mainCamera;
     protected override void Start()
     {
@@ -19,10 +19,10 @@ public class Laser : Weapon
 
     protected override void Update()
     {
-        Vector3 mouseScreenPosition = Input.mousePosition;
-        mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
-        direction = (mouseWorldPosition - new Vector2(shootPoint.position.x, shootPoint.position.y))
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        direction = (mousePos - new Vector2(shootPoint.position.x, shootPoint.position.y))
             .normalized;
+        shootPoint.right = direction;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -47,6 +47,6 @@ public class Laser : Weapon
         RaycastHit2D hit2D = Physics2D.Raycast(shootPoint.position, direction, projectileRange);
         laser.SetPosition(0, shootPoint.position);
         laser.SetPosition(1, hit2D.point);
-        Debug.DrawLine(shootPoint.position,hit2D.point);
+        //Debug.DrawLine(shootPoint.position,hit2D.point);
     }
 }
