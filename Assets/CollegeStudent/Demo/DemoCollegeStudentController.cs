@@ -24,7 +24,7 @@ namespace ClearSky
 
         private void Update()
         {
-            Restart();
+            //Restart();
             if (alive)
             {
                 Attack();
@@ -113,15 +113,12 @@ namespace ClearSky
                 alive = false;
         }
 
-        void Restart()
+        public void Restart()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha0))
-            {
                 isKickboard = false;
                 anim.SetBool("isKickBoard", false);
                 anim.SetTrigger("idle");
                 alive = true;
-            }
         }
     }
 }

@@ -1,3 +1,4 @@
+using DunGen.Demo;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,16 +8,24 @@ namespace ClearSky
 {
     public class Health_Character2 : MonoBehaviour
     {
+        public static event System.Action GameOver;
+
         Animator anim;
         public HealrhBar_Character2 healthbar;
+        public ReviveBar revivetime;
         public Text healthText;
+
+        Vector2 startPos;
 
         public int maxHealth = 10;
         public int currentHealth;
         private DemoCollegeStudentController playerController;
 
+        public bool hasRespawned = false;
+
         private void Start()
         {
+            startPos = transform.position;
             currentHealth = maxHealth;
             playerController = GetComponent<DemoCollegeStudentController>();
             anim = GetComponent<Animator>();
@@ -24,14 +33,17 @@ namespace ClearSky
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                TakeDamage(1); // You can adjust the damage value as needed
-            }
 
-            if (currentHealth <= 0)
+            if (currentHealth <= 0 )
             {
                 Die();
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                    TakeDamage(1); // You can adjust the damage value as needed
+                }
             }
         }
 
@@ -56,6 +68,17 @@ namespace ClearSky
             // Add any logic you need when the character dies (e.g., play a death animation, disable controls).
             playerController.Die();
             currentHealth = maxHealth;
+
+            if (!hasRespawned)
+            {
+                revivetime.setReviveTime(0);
+                StartCoroutine(Respawn());
+                hasRespawned = true; // Set the flag to true so that the player cannot respawn again.
+            }
+            else
+            {
+                GameOver.Invoke();
+            }
         }
 
         IEnumerator PlayerHurts()
@@ -81,6 +104,26 @@ namespace ClearSky
 
             yield return null;
         }
+
+        public IEnumerator Respawn()
+        {
+            // Additional logic for respawn (e.g., play respawn animation, reset position)
+            // ...
+
+            yield return new WaitForSeconds(2f); // Adjust the delay as needed
+
+            // Reset player state
+            currentHealth = maxHealth;
+            healthText.text = currentHealth.ToString("0") + "/" + maxHealth.ToString("0");
+            healthbar.setHealth(currentHealth);
+
+            transform.position = startPos;
+
+            playerController.Restart();
+            // Additional logic for respawn (e.g., reset position, enable controls)
+            // ...
+
+            hasRespawned = true;
+        }
     }
 }
-
