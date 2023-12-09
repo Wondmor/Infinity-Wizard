@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     private Vector3 home;
     private CapsuleCollider2D bodyCollider;
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         isAlive = true;
         _currentHealth = maxHealth;
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         home = transform.position;
     }
 
-    private void Update()
+    protected void Update()
     {
         aiPath.destination = EnemySeek();
         
@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void ChangeHealth(float damage)
+    public virtual void ChangeHealth(float damage)
     {
         _currentHealth -= damage;
         if (_currentHealth <= 0 && isAlive)
@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    private Vector3 EnemySeek()
+    protected Vector3 EnemySeek()
     {
         float distance = Vector2.Distance(player.transform.position, gameObject.transform.position);
         if (distance < viewableRange)

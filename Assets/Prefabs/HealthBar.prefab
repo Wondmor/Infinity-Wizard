@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380.3, y: 176}
+  m_AnchoredPosition: {x: -299, y: 152.5}
   m_SizeDelta: {x: 96, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6865743176845285925
@@ -321,7 +321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5425413931583183694
 RectTransform:
   m_ObjectHideFlags: 0
@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 1578827546043343637}
   - component: {fileID: 7427436760374066991}
   - component: {fileID: 4614052758483349718}
+  - component: {fileID: 5748615073775654935}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -409,7 +410,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555201298048830003}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -489,6 +490,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5748615073775654935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555201298048830003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d89a32af0c2bb4ab4741cc597e7925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2954083517395973285
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -379.8, y: 176.2}
+  m_AnchoredPosition: {x: -298, y: 151.99998}
   m_SizeDelta: {x: 94, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8997969664354803839
@@ -1011,7 +1024,6 @@ GameObject:
   - component: {fileID: 5226503146517333036}
   - component: {fileID: 7826250260797214589}
   - component: {fileID: 1478851171914979350}
-  - component: {fileID: 3914524468786287955}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: HealthSprite
@@ -1028,7 +1040,7 @@ RectTransform:
   m_GameObject: {fileID: 7445652741797912890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.02279, y: 1.02279, z: 1.02279}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5425413931583183694}
@@ -1039,7 +1051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204.55798, y: 195.04607}
+  m_AnchoredPosition: {x: -155, y: 176}
   m_SizeDelta: {x: 192, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7826250260797214589
@@ -1101,19 +1113,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3914524468786287955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7445652741797912890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3327a29389ac0469f883b6db075b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 1478851171914979350}
 --- !u!1 &7869611006883477015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,8 +1149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -269.48, y: 131.13}
-  m_SizeDelta: {x: -1073, y: -593.34}
+  m_AnchoredPosition: {x: -160.7545, y: 134.25}
+  m_SizeDelta: {x: -573.8344, y: -394.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3858204305926454135
 MonoBehaviour:
@@ -1322,7 +1321,7 @@ RectTransform:
   m_GameObject: {fileID: 8247093794064363166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.02279, y: 1.02279, z: 1.02279}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 583279392593837178}
@@ -1334,7 +1333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204.14886, y: 153.62306}
+  m_AnchoredPosition: {x: -155, y: 151.99998}
   m_SizeDelta: {x: 192, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8900068809124120733

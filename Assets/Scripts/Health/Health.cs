@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
         if (Time.time - _lastDamageTime > 0.5f)
         {
             currentHealth -= damage;
-            Debug.Log("Current Health: " + currentHealth);
+            //Debug.Log("Current Health: " + currentHealth);
             playerController.Hurt();
             _lastDamageTime = Time.time;
         }
