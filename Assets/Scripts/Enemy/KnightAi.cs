@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Pathfinding;
 public class KnightAi : Enemy 
@@ -17,6 +18,8 @@ public class KnightAi : Enemy
         aiPath = GetComponent<AIPath>();
         player = GameObject.FindWithTag("Player");
         home = transform.position;
+        
+
     }
 
     
@@ -24,5 +27,8 @@ public class KnightAi : Enemy
     protected override void EnemyAttack()
     {
         animator.SetTrigger("attack");
+
     }
+    
+    
 }

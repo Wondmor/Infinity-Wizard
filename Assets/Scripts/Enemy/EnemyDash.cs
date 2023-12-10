@@ -8,12 +8,18 @@ public class EnemyDash : MonoBehaviour
     private Animator animator;
     private Enemy enemyAi;
     private GameObject player;
-
+    
     void OnEnable()
     {
         animator = gameObject.GetComponent<Animator>();
         enemyAi = gameObject.GetComponent<Enemy>();
-        timeToDash = 10;
+
+        
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private int DashCount;
@@ -65,6 +71,8 @@ public class EnemyDash : MonoBehaviour
         animator.Play("casting");
         yield return new WaitForSeconds(2);
         animator.Play("attack");
+        StartCoroutine(PlayAttackSound(soundDelay,soundStartTime));
+        
         Vector3 target = player.transform.position;
         while (Vector3.Distance(transform.position, target) > 0.1f)
         {
@@ -78,6 +86,26 @@ public class EnemyDash : MonoBehaviour
         boxCollider2D.enabled = true;
         capsuleCollider2D.enabled = true;
         DashCount = 0;
+        yield return null;
+    }
+    
+    [Header("Sound")] public AudioClip attackSoundClip;
+    protected AudioSource audioSource;
+    public float soundStartTime;
+    public float soundDelay;
+    IEnumerator PlayAttackSound(float delay, float startTime)
+    {
+        audioSource.Stop();
+        yield return new WaitForSeconds(delay);
+        // 检查是否指定了攻击时的音效
+        if (attackSoundClip != null)
+        {
+            // 播放音效
+            audioSource.clip = attackSoundClip;
+            audioSource.time = startTime;
+            audioSource.Play();
+        }
+
         yield return null;
     }
 }

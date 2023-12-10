@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 4162674350135157278}
   - component: {fileID: 7743964696053771142}
   - component: {fileID: 7814413481651987073}
-  - component: {fileID: 1906352590906369497}
   - component: {fileID: 7299555587704952066}
   m_Layer: 7
   m_Name: Knight
@@ -234,11 +233,11 @@ MonoBehaviour:
     maximumInterval: 2
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
+  maxAcceleration: 100
   rotationSpeed: 360
-  slowdownDistance: 0.91
-  pickNextWaypointDist: 1.23
-  endReachedDistance: 1.08
+  slowdownDistance: 0.36
+  pickNextWaypointDist: 0.5
+  endReachedDistance: 1.65
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -268,7 +267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265bb2628d90ac443b0d642c62f3f2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDash: 0
+  timeToDash: 7
+  attackSoundClip: {fileID: 8300000, guid: c9b941da670d2e940a747c9f30cbf143, type: 3}
+  soundStartTime: 0
+  soundDelay: 0.24
 --- !u!114 &7814413481651987073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,19 +286,6 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 1000011742669328, guid: 315058484cf2044ce8dcb608b4678ff6,
     type: 3}
   spawnNumber: 10
---- !u!114 &1906352590906369497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010755293042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e680c856dfac7be4aa8eca296fa20eac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: {fileID: 0}
 --- !u!114 &7299555587704952066
 MonoBehaviour:
   m_ObjectHideFlags: 0

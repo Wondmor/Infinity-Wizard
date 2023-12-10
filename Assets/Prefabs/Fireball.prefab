@@ -102,6 +102,8 @@ MonoBehaviour:
   speed: 5
   range: 10
   owner: {fileID: 0}
+  attackSoundClip: {fileID: 8300000, guid: ca4833441313cd04a8083c7708344404, type: 3}
+  startTime: 0
 --- !u!50 &1522096577242898257
 Rigidbody2D:
   serializedVersion: 4

@@ -15,13 +15,19 @@ public class Weapon : MonoBehaviour
     public float projectileAngle;
     public float projectileRange;
     public float projectileSpeed ;
+    [Header("Sound")] public AudioClip attackSoundClip;
 
     protected bool isShooting;
     protected float lastShootTime;
-
-    protected virtual void Start()
+    protected AudioSource audioSource;
+    protected virtual void OnEnable()
     {
         lastShootTime = Time.time;
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     protected virtual void Update()
@@ -68,6 +74,20 @@ public class Weapon : MonoBehaviour
             bullet.GetComponent<Projectile>().range = projectileRange;
             bullet.GetComponent<Projectile>().owner = GameObject.FindWithTag("Player");
         }
-
+        PlayAttackSound();
+    }
+    
+    public float startTime ;
+    void PlayAttackSound()
+    {
+        audioSource.Stop();
+        // 检查是否指定了攻击时的音效
+        if (attackSoundClip != null)
+        {
+            // 播放音效
+            audioSource.clip = attackSoundClip;
+            audioSource.time = startTime;
+            audioSource.Play();
+        }
     }
 }

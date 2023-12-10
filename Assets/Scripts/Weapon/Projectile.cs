@@ -16,6 +16,11 @@ public class Projectile : MonoBehaviour
     private void OnEnable()
     {
         _flyTime = Time.time;
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -32,7 +37,6 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.CompareTag("Enemy") && owner.CompareTag("Player"))
         {   
             other.GetComponent<Enemy>().ChangeHealth(owner.GetComponent<Weapon>().attackDamage);
@@ -47,10 +51,23 @@ public class Projectile : MonoBehaviour
         {
             ObjectPool.Instance.PushObject(gameObject);
         }
-        
-        
+
         
     }
-    
+    [Header("Sound")] public AudioClip attackSoundClip;
+    protected AudioSource audioSource;
+    public float startTime ;
+    void PlayAttackSound()
+    {
+        audioSource.Stop();
+        // 检查是否指定了攻击时的音效
+        if (attackSoundClip != null)
+        {
+            // 播放音效
+            audioSource.clip = attackSoundClip;
+            audioSource.time = startTime;
+            audioSource.Play();
+        }
+    }
     
 }

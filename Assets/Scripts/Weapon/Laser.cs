@@ -8,7 +8,7 @@ public class Laser : Weapon
     private Vector2 direction;
     private Vector2 mousePos;
     public Camera mainCamera;
-    protected override void Start()
+    protected override void OnEnable()
     {
         laser = shootPoint.gameObject.GetComponent<LineRenderer>();
     }

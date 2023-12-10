@@ -24,7 +24,7 @@ public class EnemySummon : MonoBehaviour
         
         if (enemyAi._currentHealth < targetHealth)
         {
-            targetHealth = -1;
+            targetHealth = -10000;
             StartCoroutine(Summon());
         }
 

@@ -195,12 +195,12 @@ PrefabInstance:
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 52
+      value: 3.9
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
         type: 3}
@@ -702,6 +702,7 @@ MonoBehaviour:
   projectileAngle: 10
   projectileRange: 10
   projectileSpeed: 5
+  attackSoundClip: {fileID: 8300000, guid: 8006a24ac36aa3e49bd3eb2dcaab77af, type: 3}
 --- !u!4 &159559911951138167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28,
