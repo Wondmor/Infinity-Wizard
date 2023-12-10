@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDash: 7
-  attackSoundClip: {fileID: 8300000, guid: c9b941da670d2e940a747c9f30cbf143, type: 3}
+  attackSoundClip: {fileID: 8300000, guid: b40e356cd37122b4eacfeaa2a256d3c6, type: 3}
   soundStartTime: 0
   soundDelay: 0.24
 --- !u!114 &7814413481651987073
