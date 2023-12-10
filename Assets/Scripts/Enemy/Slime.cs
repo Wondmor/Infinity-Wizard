@@ -38,7 +38,8 @@ public class Slime : Enemy
 
     public override void ChangeHealth(float damage)
     {
-        
+        if (_currentHealth <= 0)
+            player.GetComponent<LevelUPStats>().SetExperience(3f);
         _currentHealth -= damage;
         FlashColor(flashTime);
     }

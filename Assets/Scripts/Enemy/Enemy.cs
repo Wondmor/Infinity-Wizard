@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     protected AIPath aiPath;
     private bool isAlive;
     private float _lastHit;
-    private GameObject player;
+    protected GameObject player;
     private Vector3 home;
     private CapsuleCollider2D bodyCollider;
 
@@ -64,8 +64,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator Dead()
+    protected IEnumerator Dead()
     {
+        player.GetComponent<LevelUPStats>().SetExperience(3f);
         isAlive = false;
         aiPath.maxSpeed = 0f;
         animator.Play("die");

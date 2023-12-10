@@ -17,7 +17,7 @@ public class AbilityUpPanel : MonoBehaviour
     void Update()
     {
         // 检测暂停/恢复游戏的输入
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             TogglePauseGame();
         }
