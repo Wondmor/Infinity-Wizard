@@ -564,10 +564,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2053518115102101880, guid: 521aebf732701414da1c25c63cb8390b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3825808230981270988}
-    - targetCorrespondingSourceObject: {fileID: 2053518115102101880, guid: 521aebf732701414da1c25c63cb8390b,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2291217722789363616}
     - targetCorrespondingSourceObject: {fileID: 2053518115102101880, guid: 521aebf732701414da1c25c63cb8390b,
         type: 3}
@@ -577,6 +573,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4899273355988791339}
+    - targetCorrespondingSourceObject: {fileID: 2053518115102101880, guid: 521aebf732701414da1c25c63cb8390b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6355228095845752774}
   m_SourcePrefab: {fileID: 100100000, guid: 521aebf732701414da1c25c63cb8390b, type: 3}
 --- !u!1 &920432290547209446 stripped
 GameObject:
@@ -703,27 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25edea5f4d77c74d828874c56cf37e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3825808230981270988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920432290547209446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30629d4f6f62a748b0e58ecd428fb78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  shootPoint: {fileID: 6549812030155528777}
-  attackSpeed: 1
-  attackDamage: 1
-  projectileNumber: 1
-  projectileAngle: 1
-  projectileRange: 10
-  projectileSpeed: 1
-  mainCamera: {fileID: 0}
 --- !u!114 &2291217722789363616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +747,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePower: 10
+--- !u!114 &6355228095845752774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920432290547209446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbecae51bb445d4ca81f883f0d84a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 9130366863941425704, guid: da4d591030f9b974fab986a595f31486,
+    type: 3}
+  shootPoint: {fileID: 6549812030155528777}
+  attackSpeed: 1
+  attackDamage: 1
+  projectileNumber: 1
+  projectileAngle: 30
+  projectileRange: 5
+  projectileSpeed: 5
 --- !u!4 &920432290547209447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2053518115102101881, guid: 521aebf732701414da1c25c63cb8390b,

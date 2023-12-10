@@ -12,6 +12,7 @@ public class Melee : MonoBehaviour
     {
         Transform parentTransform = transform.parent;
         owner = parentTransform.gameObject;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)

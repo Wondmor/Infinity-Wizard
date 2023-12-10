@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97329078545f2438f535ff030d866a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  select: Map_cyl
+  select: MainGame
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

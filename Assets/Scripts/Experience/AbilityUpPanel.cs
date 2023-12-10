@@ -10,12 +10,19 @@ public class AbilityUpPanel : MonoBehaviour
     private bool isGamePaused = false;
     private void OnEnable()
     {
-        
+        GameObject player = GameObject.FindWithTag("Player");
+        levelUpStats = player.GetComponent<LevelUPStats>();
+        weapon = player.GetComponent<Weapon>();
         levelUpStats.onLevelUp.AddListener(AbilityUp);
+        
     }
 
     void Update()
     {
+        GameObject player = GameObject.FindWithTag("Player");
+        levelUpStats = player.GetComponent<LevelUPStats>();
+        weapon = player.GetComponent<Weapon>();
+
         // 检测暂停/恢复游戏的输入
         if (Input.GetKeyDown(KeyCode.I))
         {
@@ -40,7 +47,7 @@ public class AbilityUpPanel : MonoBehaviour
     }
     private void AbilityUp()
     {
-        TogglePauseGame();
+        Time.timeScale = 0f;
         abilityUpPanel.SetActive(true);
     }
 
@@ -48,27 +55,27 @@ public class AbilityUpPanel : MonoBehaviour
     {
         weapon.projectileNumber += 1;
         abilityUpPanel.SetActive(false);
-        TogglePauseGame();
+        Time.timeScale = 1f;
     }
     
     public void ProjectileSpeedUp()
     {
         weapon.projectileSpeed += 1;
         abilityUpPanel.SetActive(false);
-        TogglePauseGame();
+        Time.timeScale = 1f;
     }
 
     public void AttackSpeedUp()
     {
         weapon.attackSpeed += 0.5f;
         abilityUpPanel.SetActive(false);
-        TogglePauseGame();
+        Time.timeScale = 1f;
     }
     
     public void AttackDamageUp()
     {
         weapon.attackDamage += 1;
         abilityUpPanel.SetActive(false);
-        TogglePauseGame();
+        Time.timeScale = 1f;
     }
 }

@@ -253,10 +253,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96ee2f94f00f0d499c72cbdd5b115fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 1
+  attack: 5
   attackSpeed: 1
   moveSpeed: 1
-  maxHealth: 50
+  maxHealth: 100
   _currentHealth: 0
   viewableRange: 22.39
 --- !u!114 &4162674350135157278

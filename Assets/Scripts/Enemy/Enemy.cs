@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
 
     protected void Update()
     {
+        player = GameObject.FindWithTag("Player");
         aiPath.destination = EnemySeek();
         
         if (aiPath.reachedDestination)

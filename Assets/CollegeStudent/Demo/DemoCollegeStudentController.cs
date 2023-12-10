@@ -15,9 +15,12 @@ namespace ClearSky
         private bool alive = true;
         private bool isKickboard = false;
 
+        private string characterName;
+
         // Start is called before the first frame update
         void Start()
         {
+            characterName = PlayerPrefs.GetString("CharacterName");
             rb = GetComponent<Rigidbody2D>();
             anim = GetComponent<Animator>();
         }
@@ -35,7 +38,7 @@ namespace ClearSky
 
         void KickBoard()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.Alpha4) && characterName=="2")
             {
                 if (isKickboard)
                 {

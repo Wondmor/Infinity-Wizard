@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97329078545f2438f535ff030d866a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  select: Start
+  select: Story_4
 --- !u!4 &2020359207
 Transform:
   m_ObjectHideFlags: 0
