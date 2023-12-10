@@ -13,8 +13,10 @@ public class Projectile : MonoBehaviour
     public GameObject owner;
     private float _flyTime;
 
+    private string characterName;
     private void OnEnable()
     {
+        characterName = PlayerPrefs.GetString("CharacterName");
         _flyTime = Time.time;
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -47,7 +49,7 @@ public class Projectile : MonoBehaviour
             other.GetComponent<Health>().TakeDamage(owner.GetComponent<Enemy>().attack);
             ObjectPool.Instance.PushObject(gameObject);
         }
-        else if (other.CompareTag("Tile") && other.CompareTag("Player"))
+        else if (other.CompareTag("Tile") && characterName=="2")
         {
             ObjectPool.Instance.PushObject(gameObject);
         }
