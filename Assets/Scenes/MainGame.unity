@@ -8420,12 +8420,12 @@ PrefabInstance:
     - target: {fileID: 920432290547209447, guid: a04c88e72d3fe66409139ed9a50d7768,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.91
+      value: -111.3
       objectReference: {fileID: 0}
     - target: {fileID: 920432290547209447, guid: a04c88e72d3fe66409139ed9a50d7768,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.32
+      value: 39.7
       objectReference: {fileID: 0}
     - target: {fileID: 920432290547209447, guid: a04c88e72d3fe66409139ed9a50d7768,
         type: 3}
@@ -10461,12 +10461,12 @@ PrefabInstance:
     - target: {fileID: 1555714238315500296, guid: 315058484cf2044ce8dcb608b4678ff6,
         type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1555714238315500296, guid: 315058484cf2044ce8dcb608b4678ff6,
         type: 3}
       propertyPath: attackSpeed
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1555714238315500296, guid: 315058484cf2044ce8dcb608b4678ff6,
         type: 3}
@@ -10476,7 +10476,22 @@ PrefabInstance:
     - target: {fileID: 7914160834159641863, guid: 315058484cf2044ce8dcb608b4678ff6,
         type: 3}
       propertyPath: maxSpeed
-      value: 6
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914160834159641863, guid: 315058484cf2044ce8dcb608b4678ff6,
+        type: 3}
+      propertyPath: maxAcceleration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914160834159641863, guid: 315058484cf2044ce8dcb608b4678ff6,
+        type: 3}
+      propertyPath: slowdownDistance
+      value: 2.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914160834159641863, guid: 315058484cf2044ce8dcb608b4678ff6,
+        type: 3}
+      propertyPath: endReachedDistance
+      value: 1.91
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

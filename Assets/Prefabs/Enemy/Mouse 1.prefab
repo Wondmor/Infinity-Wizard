@@ -4903,6 +4903,7 @@ GameObject:
   - component: {fileID: 8974548839941471303}
   - component: {fileID: 2334005438025963251}
   - component: {fileID: 7897786681030156496}
+  - component: {fileID: -4077705001569719676}
   m_Layer: 7
   m_Name: Mouse 1
   m_TagString: Enemy
@@ -5057,6 +5058,7 @@ MonoBehaviour:
   maxHealth: 12
   _currentHealth: 12
   viewableRange: 20
+  getExperience: 0
   flashTime: 0.05
   blood: {fileID: 2778539772323779018}
   experinece_value: 3
@@ -5130,6 +5132,19 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+--- !u!114 &-4077705001569719676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129315005791312755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0471831e5d62e4980d74be93939835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 0
 --- !u!1 &9051348383772630219
 GameObject:
   m_ObjectHideFlags: 0
