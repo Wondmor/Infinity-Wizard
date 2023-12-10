@@ -38,7 +38,6 @@ public class EnemySummon : MonoBehaviour
     public GameObject prefabToSpawn;
     IEnumerator Summon()
     {
-        Debug.Log("Summon");
         enemyAi = gameObject.GetComponent<Enemy>();
         aiPath = gameObject.GetComponent<AIPath>();
         flip = gameObject.GetComponent<Flip>();

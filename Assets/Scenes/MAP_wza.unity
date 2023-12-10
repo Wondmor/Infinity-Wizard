@@ -225,63 +225,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 216f1d62ffb9af74a812739893948aa1, type: 3}
---- !u!1001 &918657092
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1000011742669328, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_Name
-      value: Soldier
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.93545306
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.8859367
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
 --- !u!1001 &954504416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -801,7 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABAIezuLsLucQIAACsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtz2jAQ/iuMzg3jRwKht9YhpIckTGknF19ka401CMmjR4Bk+O9dyTZ26Mk7++3j229X/iRcmgZKq/RKc/asGJDvE+Jt8m0ygE9wpFslN/wD+pg3zmztg2iI+U0tV+iPfZpRe7Calz/kVvjgCJ1O8krp/ZJtIVPGGnRXVBhASCvrsyW6PifkiJ+bhU85oZXMvfWB1iKanNEsQVrQQ2g8nSVJNFuksy4jmt7Gyf0iSrq8Ns3JUtB9A8zPMGTfzabJbd9qMU3SECxxxi4umqZz31UJwU3HkdhTEzTIaGMcTogBjFOcORDzEtTAt7X1RcfJr1VlwHaCaHp64Bqla6uSn6rVc0/NriX4ToWDywRtyef/0Js4wJVW+6e+axz5Drbm5e43PZXU2JHcY/fDV9pOHqjY0ULAWw3yRa20cpIhaLXzqc5A8jAqdZksq6HcDXEt1yunawbd+/X2y/VDnMPwx0zwfdHusXVshApyh5sAjbv5hYzDxZiuBHo9i78G/tDt+LQ64JFrYxHqxpSeXqGc9qFkGUTz0zibKS0huDvSDUgq7GmNZez1Bq+wUdsr5JH6R9Q177D+bVylBPcQH0VX0FodLtsytTo8g6lfnRVcwkDaAy+oU6akbA9srEmftnG6ouUobes4+3pbpLgv6Azm87s0xVdVwU2SUhZTtkgZLYqoiEk4Pi5xTirWLdFOHtyaHIpLPLT+3zJZadqEY2eaHlb8Y69GknNZqU2pAeRrW+FCHDQ2wXfJloyjQBuwlsuwb/KZE6HKHbD8UigPky6PVtN8qJKThr8r6z05ycLPJCfefbnltYZ3DgffvC92Jud/UEsDBBQAAAgIAABAIew5VfkXbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSkkVSolmqubmpsbGJoVFaqq6RcWKKYWKKpXFKYlKSQZKhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAABAIezuLsLucQIAACsFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIew5VfkXbQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
+    dataString: UEsDBBQAAAgIAABAIeytziWEcQIAACoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtz2jAQ/iuMzg3jRwKht9YhpIckTGknF19ka401CMmjR4Bk+O9dyTZ26Inl2/328e3Kn4RL00BplV5pzp4VA/J9QrxNvk0G5xMc6VbJDf+APuaNM1v7IBpiflPLFeKxpxm1B6t5+UNuhQ+OEHSSV0rvl2wLmTLWIFxRYQBdWlnPlgh9TsgRf24WnnJCK5l76wOtRTQ5o1mCtKCH0Hg6S5JotkhnHSOa3sbJ/SJKOl5Lc7IUdN8A8zMM7LvZNLntSy2mSRqCJc7YxUXTdO6rKiG46Xok9tQEDTLaGIcTYgDjFGcOjXkJauDb2vqkY/JrVRmwnSCanh64RunarOSnavXcU7NrG3ynwsFlgjbl83/emzi4K632T33VOPIVbM3L3W96KqmxI7nH8MPXtp08ULGjhYC3GuSLWmnlJEOn1c5TnYHkYfh7GSyrodwNeNvqFeiaQfZ+u/1u/QznMPsxE3xftGtsgY1QQe1wEqBxNb+w4XAwpkuBqO/ir4E/dDu+rM7xyLWx6OqmlL69QjntQ8kyaOancTZTWkKAu6YbkFTY0xrT2OsFXvlGZa88j9S/oa545+ufxhUlwEN8FF251upwWZap1eEZTP3qrOAShqa94wV1ypSU7X2NNelpG6crWo5oW8fZ19MixX1BZzCf36UpPqoKbpKUspiyRcpoUURFTMLtcYlzUrFuG+3kwa3JIbnEO+s/LZOVpk24dabpYcU/9mokOZeV2pQaQL62GS6Ng8Yi+CzZknEUaAPWchn2TT5zIlS5A5ZfEuVh0uXRapoPWXLS8HdlPZKTLHxLcuLhyy2vNbxzOPjifbIzOf8DUEsDBBQAAAgIAABAIew5VfkXbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSkkVSolmqubmpsbGJoVFaqq6RcWKKYWKKpXFKYlKSQZKhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAABAIeytziWEcQIAACoFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIew5VfkXbQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -814,7 +757,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -833,7 +776,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -1044,5 +987,4 @@ SceneRoots:
   - {fileID: 220356477997488028}
   - {fileID: 954504416}
   - {fileID: 1786940578330247100}
-  - {fileID: 918657092}
   - {fileID: 1599574920}

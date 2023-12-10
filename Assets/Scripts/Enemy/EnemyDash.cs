@@ -28,7 +28,6 @@ public class EnemyDash : MonoBehaviour
         {
             if (Time.time - timer >= 1)
             {
-                Debug.Log(DashCount);
                 DashCount += 1;
                 if (DashCount >= timeToDash)
                 {
@@ -51,7 +50,6 @@ public class EnemyDash : MonoBehaviour
     private CapsuleCollider2D capsuleCollider2D;
     IEnumerator Dash()
     {
-        Debug.Log("Dash");
         enemyAi = gameObject.GetComponent<Enemy>();
         aiPath = gameObject.GetComponent<AIPath>();
         flip = gameObject.GetComponent<Flip>();
@@ -63,10 +61,11 @@ public class EnemyDash : MonoBehaviour
         boxCollider2D.enabled = false;
         capsuleCollider2D.enabled = false;
         
-        Vector3 target = player.transform.position;
+        
         animator.Play("casting");
         yield return new WaitForSeconds(2);
         animator.Play("attack");
+        Vector3 target = player.transform.position;
         while (Vector3.Distance(transform.position, target) > 0.1f)
         {
             transform.position = Vector3.Lerp(transform.position, target, 5f * Time.deltaTime);
