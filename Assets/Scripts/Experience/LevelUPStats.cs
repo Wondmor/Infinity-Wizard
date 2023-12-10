@@ -83,11 +83,8 @@ public class LevelUPStats : MonoBehaviour
 
     IEnumerator ShowLevelUpPanel()
     {
+        Time.timeScale = 0f;
         levelUpPanel.SetActive(true); // 激活升级面板
-
-        // 等待一小段时间（例如，2 秒）
-        yield return new WaitForSeconds(1f);
-
-        levelUpPanel.SetActive(false); // 在延迟后停用升级面板
+        yield return null;
     }
 }

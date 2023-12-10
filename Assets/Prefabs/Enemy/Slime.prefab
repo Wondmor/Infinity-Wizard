@@ -5059,6 +5059,7 @@ MonoBehaviour:
   viewableRange: 20
   flashTime: 0.05
   blood: {fileID: 2778539772323779018}
+  experinece_value: 2.5
 --- !u!114 &2334005438025963251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5123,9 +5124,9 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 0
-  pickNextWaypointDist: 2
+  pickNextWaypointDist: 0.1
   endReachedDistance: 0
-  alwaysDrawGizmos: 0
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0

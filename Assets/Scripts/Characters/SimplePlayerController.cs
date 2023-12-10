@@ -17,7 +17,7 @@ public class SimplePlayerController : MonoBehaviour
 
     private void Update()
     {
-        Restart();
+        //Restart();
         if (alive)
         {
             Attack();
@@ -76,12 +76,11 @@ public class SimplePlayerController : MonoBehaviour
         alive = false;
     }
 
-    void Restart()
+    public void Restart()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
+        
             anim.SetTrigger("idle");
             alive = true;
-        }
+        
     }
 }

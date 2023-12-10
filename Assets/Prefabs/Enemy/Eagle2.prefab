@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39be6213ffa6f40916f451a45074da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 1
+  attack: 3
   attackSpeed: 1
   moveSpeed: 3
   maxHealth: 10
@@ -172,6 +172,7 @@ MonoBehaviour:
   viewableRange: 20
   flashTime: 0.05
   blood: {fileID: 1864037176027328860}
+  experinece_value: 4
 --- !u!114 &7469646693056457214
 MonoBehaviour:
   m_ObjectHideFlags: 0

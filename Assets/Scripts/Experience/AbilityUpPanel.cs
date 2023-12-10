@@ -47,12 +47,14 @@ public class AbilityUpPanel : MonoBehaviour
     }
     private void AbilityUp()
     {
+        Debug.Log("up");
         Time.timeScale = 0f;
         abilityUpPanel.SetActive(true);
     }
 
     public void ProjectileNumberUp()
     {
+
         weapon.projectileNumber += 1;
         abilityUpPanel.SetActive(false);
         Time.timeScale = 1f;
@@ -60,6 +62,7 @@ public class AbilityUpPanel : MonoBehaviour
     
     public void ProjectileSpeedUp()
     {
+
         weapon.projectileSpeed += 1;
         abilityUpPanel.SetActive(false);
         Time.timeScale = 1f;
@@ -67,6 +70,7 @@ public class AbilityUpPanel : MonoBehaviour
 
     public void AttackSpeedUp()
     {
+
         weapon.attackSpeed += 0.5f;
         abilityUpPanel.SetActive(false);
         Time.timeScale = 1f;
@@ -74,6 +78,7 @@ public class AbilityUpPanel : MonoBehaviour
     
     public void AttackDamageUp()
     {
+      
         weapon.attackDamage += 1;
         abilityUpPanel.SetActive(false);
         Time.timeScale = 1f;

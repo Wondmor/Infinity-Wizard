@@ -10,6 +10,7 @@ public class SpawnPoint : MonoBehaviour
     public int spawnNumber;
     public float spawnRange;
 
+
     private float _lastSpawnTime;
 
     void Update()
@@ -30,4 +31,7 @@ public class SpawnPoint : MonoBehaviour
         _lastSpawnTime = Time.time;
         spawnNumber--;
     }
+    
+    
+
 }

@@ -26,20 +26,20 @@ public class GameOverForm : MonoBehaviour
 
     private void OnEnable()
     {
-        Health_Character2.GameOver += GameOver;
+        Health.GameOver += GameOver;
     }
-
+    
     private void OnMenuButtonClick()
     {
         SceneManager.LoadScene("Start");
     }
     private void OnRestartButtonClick() 
     {
-        SceneManager.LoadScene("Select_character"); // 加载主游戏场景
+        SceneManager.LoadScene("Select_character"); 
     }
     private void OnQuitButtonClick() 
     {
-        Application.Quit(); // 关闭游戏
+        Application.Quit(); 
     }
 
     private void GameOver()
@@ -49,6 +49,6 @@ public class GameOverForm : MonoBehaviour
 
     private void OnDisable()
     {
-        Health_Character2.GameOver -= GameOver;
+        Health.GameOver -= GameOver;
     }
 }

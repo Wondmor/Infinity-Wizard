@@ -12,6 +12,10 @@ public class Slime : Enemy
     private Color originalColor;
     private bool hasPlayedBlood = false; // 新增变量来追踪是否已经播放过血液粒子系统
     
+    public float experinece_value;
+
+    private bool getExperience=false;
+    
     private void OnEnable()
     {
         base.OnEnable();
@@ -38,9 +42,12 @@ public class Slime : Enemy
 
     public override void ChangeHealth(float damage)
     {
-        if (_currentHealth <= 0)
-            player.GetComponent<LevelUPStats>().SetExperience(3f);
         _currentHealth -= damage;
+        if (_currentHealth <= 0 && getExperience==false)
+        {
+            player.GetComponent<LevelUPStats>().SetExperience(experinece_value);
+            getExperience=true;
+        }
         FlashColor(flashTime);
     }
 

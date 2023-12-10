@@ -244,8 +244,8 @@ MonoBehaviour:
   attack: 1
   attackSpeed: 1
   moveSpeed: 1
-  maxHealth: 5
-  _currentHealth: 5
+  maxHealth: 30
+  _currentHealth: 30
   viewableRange: 10
 --- !u!70 &2572479823579604470
 CapsuleCollider2D:

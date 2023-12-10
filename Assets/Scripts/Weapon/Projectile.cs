@@ -43,6 +43,11 @@ public class Projectile : MonoBehaviour
             other.GetComponent<Health>().TakeDamage(owner.GetComponent<Enemy>().attack);
             ObjectPool.Instance.PushObject(gameObject);
         }
+        else if (other.CompareTag("Tile"))
+        {
+            ObjectPool.Instance.PushObject(gameObject);
+        }
+        
         
         
     }
