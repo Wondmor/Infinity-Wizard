@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
 
     public GameObject owner;
     private float _flyTime;
-    
+
     private void OnEnable()
     {
         _flyTime = Time.time;
@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy") && owner.CompareTag("Player"))
-        {   
+        {
             other.GetComponent<Enemy>().ChangeHealth(owner.GetComponent<Weapon>().attackDamage);
             ObjectPool.Instance.PushObject(gameObject);
         }
@@ -47,16 +47,15 @@ public class Projectile : MonoBehaviour
             other.GetComponent<Health>().TakeDamage(owner.GetComponent<Enemy>().attack);
             ObjectPool.Instance.PushObject(gameObject);
         }
-        else if (other.CompareTag("Tile"))
+        else if (other.CompareTag("Tile") && other.CompareTag("Player"))
         {
             ObjectPool.Instance.PushObject(gameObject);
         }
 
-        
     }
     [Header("Sound")] public AudioClip attackSoundClip;
     protected AudioSource audioSource;
-    public float startTime ;
+    public float startTime;
     void PlayAttackSound()
     {
         audioSource.Stop();
@@ -69,5 +68,5 @@ public class Projectile : MonoBehaviour
             audioSource.Play();
         }
     }
-    
+
 }

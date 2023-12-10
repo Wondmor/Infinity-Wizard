@@ -1,6 +1,7 @@
-我是NPC2
-A
-B
-C
-D
-E
+Glad you passed the first level.
+Am I strong enough?
+Far from enough. As you can see, you are now in a deserted desert. Here you have no one to turn to for help but yourself.
+Will this be harder than before?
+Certainly! Monsters will become stronger and more powerful. 
+I think I can overcome it.
+Go forward!

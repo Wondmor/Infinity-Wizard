@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     private Vector3 home;
     private CapsuleCollider2D bodyCollider;
 
+    public float getExperience;
+
     protected virtual void OnEnable()
     {
         isAlive = true;
@@ -61,13 +63,13 @@ public class Enemy : MonoBehaviour
         else if (_currentHealth > 0 && isAlive)
         {
             StartCoroutine(Wait(1f));
-            animator.Play("hurt");
+            //animator.Play("hurt");
         }
     }
 
     protected IEnumerator Dead()
     {
-        player.GetComponent<LevelUPStats>().SetExperience(3f);
+        player.GetComponent<LevelUPStats>().SetExperience(getExperience);
         isAlive = false;
         aiPath.maxSpeed = 0f;
         animator.Play("die");
@@ -78,7 +80,7 @@ public class Enemy : MonoBehaviour
         ObjectPool.Instance.PushObject(gameObject);
     }
 
-    IEnumerator Wait(float time)
+    public IEnumerator Wait(float time)
     {
         aiPath.maxSpeed = 0f;
         yield return new WaitForSeconds(time);

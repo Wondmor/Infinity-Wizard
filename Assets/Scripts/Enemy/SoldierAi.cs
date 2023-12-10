@@ -8,7 +8,13 @@ public class SoldierAi : Enemy
     
     protected override void EnemyAttack()
     {
-        animator.SetTrigger("attack");
+        StartCoroutine(soldierAttack());
     }
 
+    IEnumerator soldierAttack()
+    {
+        Wait(0.5f);
+        animator.SetTrigger("attack");
+        yield return null;
+    }
 }

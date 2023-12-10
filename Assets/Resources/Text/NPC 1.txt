@@ -1,6 +1,13 @@
-我是NPC1
-A
-B
-C
-D
-E
+I'm glad you were able to keep your appointment, Alina.
+I want to prove myself. I want to become stronger.
+Okay Alina. Let's start. 
+I am ready.
+You can press WSAD to move up, down, left, and right. You can attack with the left mouse button alone. 
+What’s more?
+You can also enhance your abilities by killing monsters. After each upgrade, you can choose the aspects you want to enhance.
+I've learned how to control myself.
+What’s more, you have a chance to be resurrected, please cherish this precious resurrection.
+Ok, I got it.
+Goooood! You are now in a snowy castle. This castle has been abandoned for a long time. Perennial snow makes it look dilapidated. 
+It looks so beautiful here.
+But there are dangers hidden everywhere here. In the end, there is a soldier guarding the portal, so be careful!
