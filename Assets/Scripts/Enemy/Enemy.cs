@@ -1,9 +1,9 @@
-using System;
+
 using System.Collections;
-using BehaviorDesigner.Runtime.Tasks.Unity.UnityGameObject;
+
 using Pathfinding;
 using UnityEngine;
-using UnityEngine.AI;
+
 
 public class Enemy : MonoBehaviour
 {
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     private Vector3 home;
     private CapsuleCollider2D bodyCollider;
 
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         isAlive = true;
         _currentHealth = maxHealth;
