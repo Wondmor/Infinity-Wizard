@@ -1,7 +1,4 @@
-
-using System;
 using System.Collections;
-
 using Pathfinding;
 using UnityEngine;
 
@@ -86,8 +83,12 @@ public class Enemy : MonoBehaviour
         isEnabled = false;
         aiPath.maxSpeed = 0f;
         animator.Play("die");
-        bodyCollider = GetComponent<CapsuleCollider2D>();
-        bodyCollider.enabled = false;
+        CapsuleCollider2D myCapsuleCollider2D;
+        if ((myCapsuleCollider2D = GetComponent<CapsuleCollider2D>()) != null)
+        {
+            myCapsuleCollider2D.enabled = false;
+        }
+        
         aiPath.enabled = false;
         yield return new WaitForSeconds(1f);
         ObjectPool.Instance.PushObject(gameObject);
