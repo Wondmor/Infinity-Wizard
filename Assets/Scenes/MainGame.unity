@@ -2066,6 +2066,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2527493250513570501, guid: 5452d82538bb19940b6ae27920bb5f91,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 42.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527493250513570501, guid: 5452d82538bb19940b6ae27920bb5f91,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.37
+      objectReference: {fileID: 0}
     - target: {fileID: 2662703145581518492, guid: 5452d82538bb19940b6ae27920bb5f91,
         type: 3}
       propertyPath: m_TagString
@@ -3000,6 +3010,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297643369063729029, guid: 5452d82538bb19940b6ae27920bb5f91,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297643369063729029, guid: 5452d82538bb19940b6ae27920bb5f91,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.5332294
       objectReference: {fileID: 0}
     - target: {fileID: 8313619250145247006, guid: 5452d82538bb19940b6ae27920bb5f91,
         type: 3}
@@ -12121,7 +12141,7 @@ PrefabInstance:
     - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
         type: 3}
       propertyPath: maxHealth
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
         type: 3}
@@ -12157,7 +12177,7 @@ PrefabInstance:
     - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
         type: 3}
       propertyPath: _currentHealth
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
         type: 3}
