@@ -774,7 +774,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: The story begins in a magical kingdom filled with mysterious magic and
-    dangerous adventures. Elena is a trainee magician at a magic academy. She craves
+    dangerous adventures. Alina is a trainee magician at a magic academy. She craves
     challenges and recognition.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -867,7 +867,7 @@ MonoBehaviour:
   textComponent: {fileID: 1802132284}
   displayButton: {fileID: 412202158}
   completeText: The story begins in a magical kingdom filled with mysterious magic
-    and dangerous adventures. Elena is a trainee magician at a magic academy. She
+    and dangerous adventures. Alina is a trainee magician at a magic academy. She
     craves challenges and recognition.
   typingSpeed: 0.03
 --- !u!1 &2144434518
