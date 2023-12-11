@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using UnityEngine;
 using Pathfinding;
-using UnityEngine.SceneManagement;
 public class KnightAi : Enemy 
 {
+    private bool isAlive;
     private Vector3 home;
     
     private void Start()
@@ -30,23 +30,5 @@ public class KnightAi : Enemy
 
     }
     
-    
-    protected override IEnumerator Dead()
-    {
-        EnemyDash enemyDash = gameObject.GetComponent<EnemyDash>();
-        enemyDash.enabled = false;
-        ParticleSystem particleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
-        particleSystem.Play();
-        player.GetComponent<LevelUPStats>().SetExperience(getExperience);
-        isAlive = false;
-        aiPath.maxSpeed = 0f;
-        animator.Play("die");
-        bodyCollider = GetComponent<CapsuleCollider2D>();
-        bodyCollider.enabled = false;
-        aiPath.enabled = false;
-        
-        yield return new WaitForSeconds(10f);
-        SceneManager.LoadScene("Start");
-    }
     
 }
