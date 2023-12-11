@@ -1219,7 +1219,7 @@ PrefabInstance:
     - target: {fileID: 159559911951138167, guid: 584f3efeb939f534c9c07adf55a67fc2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.4
+      value: 40.1
       objectReference: {fileID: 0}
     - target: {fileID: 159559911951138167, guid: 584f3efeb939f534c9c07adf55a67fc2,
         type: 3}
@@ -1495,7 +1495,7 @@ PrefabInstance:
     - target: {fileID: 6041494131692766584, guid: 216f1d62ffb9af74a812739893948aa1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.16891
+      value: 40.868908
       objectReference: {fileID: 0}
     - target: {fileID: 7151633522109852201, guid: 216f1d62ffb9af74a812739893948aa1,
         type: 3}
@@ -1510,7 +1510,7 @@ PrefabInstance:
     - target: {fileID: 8442198221829030175, guid: 216f1d62ffb9af74a812739893948aa1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.16891
+      value: 40.868908
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5679,6 +5679,12 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1506577251678725357, guid: b55292d41de957a4897c0a35737ad850,
+        type: 3}
     - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
         type: 3}
       propertyPath: _currentHealth
@@ -12124,6 +12130,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
         type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1506577251678725357, guid: b55292d41de957a4897c0a35737ad850,
+        type: 3}
+    - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
+        type: 3}
       propertyPath: attackRange
       value: 8
       objectReference: {fileID: 0}
@@ -12250,6 +12262,12 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1506577251678725357, guid: b55292d41de957a4897c0a35737ad850,
+        type: 3}
     - target: {fileID: 802085172294597939, guid: 389c7e1a1dabb4e1e917001420b89c9a,
         type: 3}
       propertyPath: attackSpeed
