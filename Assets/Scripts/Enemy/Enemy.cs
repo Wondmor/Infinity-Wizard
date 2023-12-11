@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 
 using Pathfinding;
@@ -24,10 +25,18 @@ public class Enemy : MonoBehaviour
 
     public float getExperience;
 
+    protected bool isEnabled;
+
+
     protected virtual void OnEnable()
     {
         isAlive = true;
-        _currentHealth = maxHealth;
+        if (!isEnabled)
+        {
+            _currentHealth = maxHealth;
+            isEnabled = true;
+        }
+        
         animator = gameObject.GetComponent<Animator>();
         aiPath = GetComponent<AIPath>();
         player = GameObject.FindWithTag("Player");
@@ -71,6 +80,7 @@ public class Enemy : MonoBehaviour
     {
         player.GetComponent<LevelUPStats>().SetExperience(getExperience);
         isAlive = false;
+        isEnabled = false;
         aiPath.maxSpeed = 0f;
         animator.Play("die");
         bodyCollider = GetComponent<CapsuleCollider2D>();

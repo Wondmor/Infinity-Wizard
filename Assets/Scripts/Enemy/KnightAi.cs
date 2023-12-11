@@ -35,6 +35,8 @@ public class KnightAi : Enemy
     {
         EnemyDash enemyDash = gameObject.GetComponent<EnemyDash>();
         enemyDash.enabled = false;
+        Flip flip = gameObject.GetComponent<Flip>();
+        flip.enabled = false;
         ParticleSystem particleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
         particleSystem.Play();
         player.GetComponent<LevelUPStats>().SetExperience(getExperience);

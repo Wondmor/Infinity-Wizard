@@ -38,34 +38,66 @@ public class EnemySummon : MonoBehaviour
     public GameObject prefabToSpawn;
     IEnumerator Summon()
     {
-        enemyAi = gameObject.GetComponent<Enemy>();
-        aiPath = gameObject.GetComponent<AIPath>();
-        flip = gameObject.GetComponent<Flip>();
-        boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
-        capsuleCollider2D = gameObject.GetComponent<CapsuleCollider2D>();
-        enemyDash = gameObject.GetComponent<EnemyDash>();
-        enemyAi.enabled = false;
-        flip.enabled = false;
-        aiPath.enabled = false;
-        boxCollider2D.enabled = false;
-        capsuleCollider2D.enabled = false;
-        enemyDash.enabled = false;
+        if ((enemyAi = gameObject.GetComponent<Enemy>()) != null)
+        {
+            enemyAi.enabled = false;
+        }
+        if ((aiPath = gameObject.GetComponent<AIPath>()) != null)
+        {
+            aiPath.enabled = false;
+        }
+        if ((flip = gameObject.GetComponent<Flip>()) != null)
+        {
+            flip.enabled = false;
+        }
+        if ((boxCollider2D = gameObject.GetComponent<BoxCollider2D>()) != null)
+        {
+            boxCollider2D.enabled = false;
+        }
+        if ((capsuleCollider2D = gameObject.GetComponent<CapsuleCollider2D>()) != null)
+        {
+            capsuleCollider2D.enabled = false;
+        }
+        if ((enemyDash = gameObject.GetComponent<EnemyDash>()) != null)
+        {
+            enemyDash.enabled = false;
+        }
+        
         animator.Play("victory");
         for (int i = 0; i < spawnNumber; i++)
         {
             yield return new WaitForSeconds(1);
-            Vector3 randSpawnPosition = new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), 0f);
+            Vector3 randSpawnPosition = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0f);
             randSpawnPosition += gameObject.transform.position;
             Spawn(prefabToSpawn, randSpawnPosition);
         }
         
-        enemyAi.enabled = true;
-        flip.enabled = true;
-        aiPath.enabled = true;
-        boxCollider2D.enabled = true;
-        capsuleCollider2D.enabled = true;
-        enemyDash.enabled = true;
-        enemyDash.timeToDash = 3;
+        if ((enemyAi = gameObject.GetComponent<Enemy>()) != null)
+        {
+            enemyAi.enabled = true;
+        }
+        if ((aiPath = gameObject.GetComponent<AIPath>()) != null)
+        {
+            aiPath.enabled = true;
+        }
+        if ((flip = gameObject.GetComponent<Flip>()) != null)
+        {
+            flip.enabled = true;
+        }
+        if ((boxCollider2D = gameObject.GetComponent<BoxCollider2D>()) != null)
+        {
+            boxCollider2D.enabled = true;
+        }
+        if ((capsuleCollider2D = gameObject.GetComponent<CapsuleCollider2D>()) != null)
+        {
+            capsuleCollider2D.enabled = true;
+        }
+        if ((enemyDash = gameObject.GetComponent<EnemyDash>()) != null)
+        {
+            enemyDash.enabled = true;
+            enemyDash.timeToDash = 3;
+        }
+        
         yield return null;
     }
 

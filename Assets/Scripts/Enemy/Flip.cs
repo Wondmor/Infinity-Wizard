@@ -12,6 +12,7 @@ public class Flip : MonoBehaviour
     {
         StartCoroutine(FlipCharacter());
         scale = gameObject.transform.localScale.x;
+        if (scale < 0) scale = -scale;
     }
 
 

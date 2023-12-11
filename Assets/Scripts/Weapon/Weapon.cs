@@ -77,6 +77,7 @@ public class Weapon : MonoBehaviour
         PlayAttackSound();
     }
     
+    
     public float startTime ;
     void PlayAttackSound()
     {

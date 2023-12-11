@@ -10,11 +10,7 @@ public class AbilityUpPanel : MonoBehaviour
     private bool isGamePaused = false;
     private void OnEnable()
     {
-        GameObject player = GameObject.FindWithTag("Player");
-        levelUpStats = player.GetComponent<LevelUPStats>();
-        weapon = player.GetComponent<Weapon>();
         levelUpStats.onLevelUp.AddListener(AbilityUp);
-        
     }
 
     void Update()
@@ -47,7 +43,6 @@ public class AbilityUpPanel : MonoBehaviour
     }
     private void AbilityUp()
     {
-        Debug.Log("up");
         Time.timeScale = 0f;
         abilityUpPanel.SetActive(true);
     }

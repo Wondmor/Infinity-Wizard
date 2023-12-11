@@ -51,21 +51,32 @@ public class EnemyDash : MonoBehaviour
     }
 
     private AIPath aiPath;
-    //private Flip flip;
+    private Flip flip;
     private BoxCollider2D boxCollider2D;
     private CapsuleCollider2D capsuleCollider2D;
     IEnumerator Dash()
     {
-        enemyAi = gameObject.GetComponent<Enemy>();
-        aiPath = gameObject.GetComponent<AIPath>();
-        //flip = gameObject.GetComponent<Flip>();
-        boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
-        capsuleCollider2D = gameObject.GetComponent<CapsuleCollider2D>();
-        enemyAi.enabled = false;
-        //flip.enabled = false;
-        aiPath.enabled = false;
-        boxCollider2D.enabled = false;
-        capsuleCollider2D.enabled = false;
+        if ((enemyAi = gameObject.GetComponent<Enemy>()) != null)
+        {
+            enemyAi.enabled = false;
+        }
+        if ((aiPath = gameObject.GetComponent<AIPath>()) != null)
+        {
+            aiPath.enabled = false;
+        }
+        if ((flip = gameObject.GetComponent<Flip>()) != null)
+        {
+            flip.enabled = false;
+        }
+        if ((boxCollider2D = gameObject.GetComponent<BoxCollider2D>()) != null)
+        {
+            boxCollider2D.enabled = false;
+        }
+        if ((capsuleCollider2D = gameObject.GetComponent<CapsuleCollider2D>()) != null)
+        {
+            capsuleCollider2D.enabled = false;
+        }
+
         
         
         animator.Play("casting");
@@ -80,11 +91,27 @@ public class EnemyDash : MonoBehaviour
             yield return null;
         }
         
-        enemyAi.enabled = true;
-        //flip.enabled = true;
-        aiPath.enabled = true;
-        boxCollider2D.enabled = true;
-        capsuleCollider2D.enabled = true;
+        if ((enemyAi = gameObject.GetComponent<Enemy>()) != null)
+        {
+            enemyAi.enabled = true;
+        }
+        if ((aiPath = gameObject.GetComponent<AIPath>()) != null)
+        {
+            aiPath.enabled = true;
+        }
+        if ((flip = gameObject.GetComponent<Flip>()) != null)
+        {
+            flip.enabled = true;
+        }
+        if ((boxCollider2D = gameObject.GetComponent<BoxCollider2D>()) != null)
+        {
+            boxCollider2D.enabled = true;
+        }
+        if ((capsuleCollider2D = gameObject.GetComponent<CapsuleCollider2D>()) != null)
+        {
+            capsuleCollider2D.enabled = true;
+        }
+
         DashCount = 0;
         yield return null;
     }
