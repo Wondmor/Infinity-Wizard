@@ -11,6 +11,8 @@ public class TalkButton : MonoBehaviour
     protected GameObject player;
     public bool heal=false;
 
+    private bool he=false;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,9 +31,10 @@ public class TalkButton : MonoBehaviour
         if (Button.activeSelf && Input.GetKeyDown(KeyCode.R))
         {
             talkUI.SetActive(true);
-            if(heal==true)
+            if(heal==true && he==false)
             {
                 player.GetComponent<Health>().Heal();
+                he=true;
             }
         }
     }
