@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0023804, y: 0.0023041}
-  m_SizeDelta: {x: 942, y: 530}
+  m_AnchoredPosition: {x: -0.000061035, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690545352
 MonoBehaviour:
@@ -226,14 +226,14 @@ RectTransform:
   m_GameObject: {fileID: 1234178231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1564976100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000000028871, y: -17}
+  m_AnchoredPosition: {x: -2, y: 200}
   m_SizeDelta: {x: 873.8167, y: -89.9718}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234178233
@@ -275,10 +275,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In the final fierce battle, Alina showed her full strength. She used all
+  m_text: 'In the final fierce battle, Alina showed her full strength. She used all
     her witchcraft skills to have a thrilling duel with the powerful Boss. In the
     end, she defeated her opponent and obtained the mysterious treasure hidden in
     the depths.
+
+
+    But this treasure is not actually a treasure of gold and silver,
+    but the spirit of a magician - how to become a legendary wizard and bring prosperity
+    and peace to the kingdom.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -383,7 +388,7 @@ RectTransform:
   m_GameObject: {fileID: 1350865814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1485475753}
@@ -391,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: -218}
+  m_AnchoredPosition: {x: 750, y: -470}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350865816
@@ -613,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: End
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -915,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97329078545f2438f535ff030d866a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  select: MainGame
+  select: Start
 --- !u!4 &2020359207
 Transform:
   m_ObjectHideFlags: 0

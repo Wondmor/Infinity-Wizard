@@ -164,12 +164,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39be6213ffa6f40916f451a45074da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 1
+  attack: 7
   attackSpeed: 1
-  moveSpeed: 3
-  maxHealth: 10
-  _currentHealth: 10
+  moveSpeed: 2
+  maxHealth: 35
+  _currentHealth: 35
   viewableRange: 20
+  getExperience: 0
   flashTime: 0.05
   blood: {fileID: 1864037176027328860}
   experinece_value: 0

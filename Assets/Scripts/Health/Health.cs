@@ -48,6 +48,11 @@ public class Health : MonoBehaviour
         }
     }
 
+        public void Heal()
+    {
+        currentHealth = maxHealth;
+    }
+
 
     public void Die()
     {

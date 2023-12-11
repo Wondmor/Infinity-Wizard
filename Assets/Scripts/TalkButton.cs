@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TalkButton : MonoBehaviour
 {
     public GameObject Button;
     public GameObject talkUI;
+
+    protected GameObject player;
+    public bool heal=false;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,9 +25,14 @@ public class TalkButton : MonoBehaviour
 
     private void Update()
     {
+        player = GameObject.FindWithTag("Player");
         if (Button.activeSelf && Input.GetKeyDown(KeyCode.R))
         {
             talkUI.SetActive(true);
+            if(heal==true)
+            {
+                player.GetComponent<Health>().Heal();
+            }
         }
     }
 

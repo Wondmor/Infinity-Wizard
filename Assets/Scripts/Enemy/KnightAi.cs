@@ -46,7 +46,7 @@ public class KnightAi : Enemy
         aiPath.enabled = false;
         
         yield return new WaitForSeconds(10f);
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Story_Final");
     }
     
 }

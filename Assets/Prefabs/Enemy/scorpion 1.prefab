@@ -5055,8 +5055,8 @@ MonoBehaviour:
   attack: 4
   attackSpeed: 1
   moveSpeed: 2
-  maxHealth: 15
-  _currentHealth: 15
+  maxHealth: 30
+  _currentHealth: 30
   viewableRange: 20
   getExperience: 0
   flashTime: 0.05
