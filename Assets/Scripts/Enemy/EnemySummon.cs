@@ -71,6 +71,7 @@ public class EnemySummon : MonoBehaviour
             randSpawnPosition += gameObject.transform.position;
             Spawn(prefabToSpawn, randSpawnPosition);
         }
+        animator.Play("attack");
         
         if ((enemyAi = gameObject.GetComponent<Enemy>()) != null)
         {

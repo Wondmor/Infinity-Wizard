@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using Pathfinding;
 public class PriestAi : Enemy
 {
     [Header("Priest")]
@@ -18,6 +16,7 @@ public class PriestAi : Enemy
         shootPoint = transform.Find("ShootPoint");
     }
     
+ 
 
     protected override void EnemyAttack()
     {

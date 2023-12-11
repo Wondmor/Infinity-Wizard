@@ -41,17 +41,20 @@ public class Enemy : MonoBehaviour
         aiPath = GetComponent<AIPath>();
         player = GameObject.FindWithTag("Player");
         home = transform.position;
+        reached = false;
+
     }
 
+    private bool reached;
     protected void Update()
     {
         player = GameObject.FindWithTag("Player");
         aiPath.destination = EnemySeek();
-        
-        if (aiPath.reachedDestination)
+        reached = aiPath.reachedDestination;
+        if (reached)
         {
             animator.SetBool("isMoving", false);
-            if (Time.time - _lastHit > 1 / attackSpeed && transform.position != home)
+            if (Time.time - _lastHit > 1 / attackSpeed)
             {
                 EnemyAttack();
                 _lastHit = Time.time;
