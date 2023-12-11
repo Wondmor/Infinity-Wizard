@@ -14048,8 +14048,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24a088ee1a61bd45928b7b615b30bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 0}
-  spawnNumber: 0
+  prefabToSpawn: {fileID: 1000011742669328, guid: 315058484cf2044ce8dcb608b4678ff6,
+    type: 3}
+  spawnNumber: 3
 --- !u!61 &1963375844
 BoxCollider2D:
   m_ObjectHideFlags: 0
