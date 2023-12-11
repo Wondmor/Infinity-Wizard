@@ -16,11 +16,11 @@ public class Enemy : MonoBehaviour
     [Header("Component")] private Transform target;
     protected Animator animator;
     protected AIPath aiPath;
-    private bool isAlive;
+    protected bool isAlive;
     private float _lastHit;
     protected GameObject player;
     private Vector3 home;
-    private CapsuleCollider2D bodyCollider;
+    protected CapsuleCollider2D bodyCollider;
 
     public float getExperience;
 
@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected IEnumerator Dead()
+    protected virtual IEnumerator Dead()
     {
         player.GetComponent<LevelUPStats>().SetExperience(getExperience);
         isAlive = false;
